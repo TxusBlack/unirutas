@@ -1,0 +1,7 @@
+{
+  "name": "unirutas",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
