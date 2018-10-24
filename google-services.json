@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "963882070136",
+    "firebase_url": "https://unirutas-app.firebaseio.com",
+    "project_id": "unirutas-app",
+    "storage_bucket": "unirutas-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963882070136:android:1c4f436b51c80a93",
+        "android_client_info": {
+          "package_name": "co.diegomoreno.unirutas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963882070136-nmarjf6rp2jg392prb4qc1ts2nhdb40l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxTyIG75K4Ot5OZTOZyAxHpm7OisUa-kU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

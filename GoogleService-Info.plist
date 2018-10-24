@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>963882070136-8919o7kp5s1si9htebghlilkepd6fcqi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.963882070136-8919o7kp5s1si9htebghlilkepd6fcqi</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD--Bu7ODkTMs7_JPrxbLnp00WHeVFF47I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>963882070136</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>co.diegomoreno.unirutas</string>
+	<key>PROJECT_ID</key>
+	<string>unirutas-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>unirutas-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:963882070136:ios:1c4f436b51c80a93</string>
+	<key>DATABASE_URL</key>
+	<string>https://unirutas-app.firebaseio.com</string>
+</dict>
+</plist>
