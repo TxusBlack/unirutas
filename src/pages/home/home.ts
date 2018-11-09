@@ -41,16 +41,20 @@ export class HomePage {
 
   gps() {
     return new Promise(resolve => {
-      let watch = this.geolocation.watchPosition();
-      watch.subscribe((resp) => {
-        // data can be a set of coordinates, or an error (if an error occurred).
-        // data.coords.latitude
-        // data.coords.longitude
-        console.log(resp.coords.latitude);
-        console.log(resp.coords.longitude);
-        this.gpsData.lat = resp.coords.latitude;
-        this.gpsData.lng = resp.coords.longitude;
-        resolve();
+      this.geolocation.getCurrentPosition().then((resp) => {
+        let watch = this.geolocation.watchPosition()
+          .subscribe((data) => {
+            console.log(resp.coords.latitude);
+            console.log(resp.coords.longitude);
+            this.gpsData.lat = resp.coords.latitude;
+            this.gpsData.lng = resp.coords.longitude;
+            resolve({
+              lat: data.coords.latitude,
+              lng: data.coords.longitude,
+            });
+          });
+      }).catch((error) => {
+        console.log('Error getting location', error);
       });
     });
   }

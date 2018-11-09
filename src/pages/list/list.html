@@ -7,17 +7,30 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+<ion-content class="card-background-page">
+
+  <ion-card>
+    <img src="assets/imgs/card-saopaolo.png"/>
+    <div class="card-title">Socorro - Unisangil</div>
+    <div class="card-subtitle">Puestos disponibles: 4</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/imgs/card-amsterdam.png"/>
+    <div class="card-title">El valle de San José - Unisangil</div>
+    <div class="card-subtitle">Puestos disponibles: 3</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/imgs/card-sf.png"/>
+    <div class="card-title">El Páramo - Unisangil</div>
+    <div class="card-subtitle">Puestos disponibles: 3</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/imgs/card-madison.png"/>
+    <div class="card-title">Pinchote - Unisangil</div>
+    <div class="card-subtitle">Puestos disponibles: 2</div>
+  </ion-card>
+
 </ion-content>

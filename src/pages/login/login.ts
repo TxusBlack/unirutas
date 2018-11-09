@@ -3,6 +3,7 @@ import {IonicPage, NavController, NavParams, AlertController, LoadingController}
 import { User } from '../../models/user';
 import { AngularFireAuth } from "angularfire2/auth";
 import { HomePage } from '../home/home';
+import {ListPage} from "../list/list";
 
 @IonicPage()
 @Component({
@@ -33,7 +34,7 @@ export class LoginPage {
       const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
       console.log(result);
       if (result) {
-        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.setRoot(ListPage);
         loading.dismiss();
       }
     } catch(e) {
