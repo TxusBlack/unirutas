@@ -12,11 +12,15 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from "angularfire2/auth";
+import { AngularFirestore } from 'angularfire2/firestore';
 import { FIREBASE_CONFIG } from '../config/firebase.config';
 import { AgmCoreModule } from '@agm/core';
 
 import { UbicationProvider } from '../providers/ubication/ubication';
 import { UserProvider } from '../providers/user/user';
+import {IonicStorageModule} from "@ionic/storage";
+
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -39,6 +43,7 @@ import { UserProvider } from '../providers/user/user';
         }
       }
     }),
+    IonicStorageModule.forRoot(),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
     AgmCoreModule.forRoot({
@@ -57,7 +62,8 @@ import { UserProvider } from '../providers/user/user';
     Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UbicationProvider,
-    UserProvider
+    UserProvider,
+    AngularFirestore
   ]
 })
 export class AppModule {}

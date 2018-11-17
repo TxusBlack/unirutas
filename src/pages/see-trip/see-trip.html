@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Viaje Seleccionado</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/perfil-conductor.png">
+      </ion-avatar>
+      <h2>{{conductor}}</h2>
+      <p>Corsa 2010</p>
+    </ion-item>
+    <img src="assets/imgs/conductor.jpg">
+    <ion-card-content>
+      <p>Hola, viajo para Unisangil a las 6pm y tengo disponbiles puestos, cobro a $3000 cada pasaje, si deseas me puedes enviar la solicitud y me pongo en contacto contigo para acordar nuestro viaje.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/imgs/map.png">
+    <ion-fab right top>
+      <button ion-fab>
+        <ion-icon name="pin"></ion-icon>
+      </button>
+    </ion-fab>
+    <ion-item>
+      <ion-icon name="football" item-start large></ion-icon>
+      <h2>Parque Central</h2>
+      <p>{{desde}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="wine" item-start large ></ion-icon>
+      <h2>Parqueadero</h2>
+      <p>Unisangil</p>
+    </ion-item>
+    <ion-item>
+      <span item-start style="color: #32db64;">35 min</span>
+      <span item-start>(15 Km)</span>
+      <button ion-button icon-start clear item-end (click)="start()">
+        <ion-icon name="navigate"></ion-icon>
+        Iniciar
+      </button>
+    </ion-item>
+  </ion-card>
+</ion-content>

@@ -28,10 +28,11 @@ export class ListPage {
     }
   }
 
-  itemTapped(event, item) {
+  goToSeeTrip(event, desde, conductor) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(ListPage, {
-      item: item
+    this.navCtrl.push('SeeTripPage', {
+      desde: desde,
+      conductor: conductor
     });
   }
 }

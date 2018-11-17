@@ -1,33 +1,33 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
+    <ion-title>Viajes Disponibles</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page">
 
-  <ion-card>
+  <ion-card (click)="goToSeeTrip($event, 'Socorro', 'William Mendoza')">
     <img src="assets/imgs/card-saopaolo.png"/>
     <div class="card-title">Socorro - Unisangil</div>
     <div class="card-subtitle">Puestos disponibles: 4</div>
   </ion-card>
 
-  <ion-card>
+  <ion-card (click)="goToSeeTrip($event, 'Curití', 'Briand Porras')">
     <img src="assets/imgs/card-amsterdam.png"/>
-    <div class="card-title">El valle de San José - Unisangil</div>
+    <div class="card-title">Curití - Unisangil</div>
     <div class="card-subtitle">Puestos disponibles: 3</div>
   </ion-card>
 
-  <ion-card>
+  <ion-card (click)="goToSeeTrip($event, 'El Páramo', 'Michael Chacón')">
     <img src="assets/imgs/card-sf.png"/>
     <div class="card-title">El Páramo - Unisangil</div>
     <div class="card-subtitle">Puestos disponibles: 3</div>
   </ion-card>
 
-  <ion-card>
+  <ion-card (click)="goToSeeTrip($event, 'Pinchote', 'Henry Niño')">
     <img src="assets/imgs/card-madison.png"/>
     <div class="card-title">Pinchote - Unisangil</div>
     <div class="card-subtitle">Puestos disponibles: 2</div>

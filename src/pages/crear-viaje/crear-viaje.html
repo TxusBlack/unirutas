@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Crear Viaje</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/perfil-conductor.png">
+      </ion-avatar>
+      <h3>Diego Moreno</h3>
+    </ion-item>
+    <img src="../../assets/imgs/conductor.jpg" />
+    <ion-card-content>
+      <ion-item>
+        <ion-label stacked>Viaje desde</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Cantidad de puestos</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Valor por puesto</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      <button ion-button block round color="secondary" (click)="goToHome()">Crear Viaje</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
