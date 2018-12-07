@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {UbicationProvider} from "../../providers/ubication/ubication";
 
 @Component({
   selector: 'page-list',
@@ -10,7 +11,7 @@ export class ListPage {
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private _provider: UbicationProvider) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
@@ -34,5 +35,9 @@ export class ListPage {
       desde: desde,
       conductor: conductor
     });
+  }
+
+  ionViewWillEnter() {
+    this._provider.verViajes();
   }
 }

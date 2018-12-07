@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {UbicationProvider} from "../../providers/ubication/ubication";
 
 @IonicPage()
 @Component({
@@ -11,7 +12,7 @@ export class SeeTripPage {
   public desde: String;
   public conductor: String;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alert: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alert: AlertController, private _provider: UbicationProvider) {
   }
 
   ionViewDidLoad() {

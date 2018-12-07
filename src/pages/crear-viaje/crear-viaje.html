@@ -19,17 +19,17 @@
     <ion-card-content>
       <ion-item>
         <ion-label stacked>Viaje desde</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input [(ngModel)]="origen" type="text"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Cantidad de puestos</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-input [(ngModel)]="puestos" type="number"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Valor por puesto</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-input [(ngModel)]="valor" type="number"></ion-input>
       </ion-item>
-      <button ion-button block round color="secondary" (click)="goToHome()">Crear Viaje</button>
+      <button ion-button block round color="secondary" (click)="crearViaje()">Crear Viaje</button>
     </ion-card-content>
   </ion-card>
 </ion-content>

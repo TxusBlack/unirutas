@@ -4,6 +4,8 @@ import { User } from '../../models/user';
 import { AngularFireAuth } from "angularfire2/auth";
 import { HomePage } from '../home/home';
 import {ListPage} from "../list/list";
+import {Storage} from "@ionic/storage";
+import {UbicationProvider} from "../../providers/ubication/ubication";
 
 @IonicPage()
 @Component({
@@ -19,7 +21,9 @@ export class LoginPage {
     public navParams: NavParams,
     private afAuth: AngularFireAuth,
     private alertCtrl: AlertController,
-    private loadingCtrl: LoadingController
+    private loadingCtrl: LoadingController,
+    private storage: Storage,
+    private _provider: UbicationProvider
   ) { }
 
   ionViewDidLoad() {
@@ -30,12 +34,22 @@ export class LoginPage {
     let loading = this.loadingCtrl.create({
       content: 'Cargando'
     });
+    loading.present();
     try {
       const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
       console.log(result);
       if (result) {
-        this.navCtrl.setRoot(ListPage);
-        loading.dismiss();
+        this.storage.ready().then(() => {
+          this.storage.set('user', user).then(() => {
+            this._provider.initDocument(user.email, {email: user.email}).then(res => {
+              if (res) {
+                console.log(res);
+                this.navCtrl.setRoot(ListPage);
+                loading.dismiss();
+              }
+            });
+          });
+        });
       }
     } catch(e) {
       console.log(e.message);

@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>UniRutas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <agm-map [latitude]="gpsData.lat" [longitude]="gpsData.lng" [zoom]="16">
+    <agm-marker [latitude]="gpsData.lat" [longitude]="gpsData.lng"></agm-marker>
+  </agm-map>
+</ion-content>
